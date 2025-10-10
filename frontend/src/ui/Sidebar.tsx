@@ -86,16 +86,23 @@ export function SidebarContent({ isSidebarOpen, setIsSidebarOpen }: PropTypes) {
     >
       <>
         <div className="flex items-center gap-3 w-full min-h-10 relative">
-          <Logo
-            className={`tran ${isSidebarOpen ? 'opacity-100' : 'opacity-0'}`}
-          />
-          <p
-            className={`text-xl font-bold tran ${
-              isSidebarOpen ? 'opacity-100' : 'opacity-0'
-            }`}
+          <div
+            className="flex items-center gap-3 cursor-pointer flex-1"
+            onClick={() => navigate('/')}
           >
-            Projexio
-          </p>
+            <Logo
+              className={`size-10 tran ${
+                isSidebarOpen ? 'opacity-100' : 'opacity-0'
+              }`}
+            />
+            <p
+              className={`text-xl font-bold tran ${
+                isSidebarOpen ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              Projexio
+            </p>
+          </div>
           <Button
             variant="ghost"
             size="icon"

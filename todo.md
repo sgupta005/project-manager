@@ -8,7 +8,7 @@
 - [x] show analytics on project page
 - [x] Redeploy backend to some faster provider
 - [x] Profile page and profile avatar
-- [ ] Create Readme file
+- [x] Create Readme file
 - [ ] Make empty ui look beautiful
 - [ ] Create Landing page
 - [ ] Add AI features??

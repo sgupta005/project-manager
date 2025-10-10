@@ -1,12 +1,14 @@
+import { cn } from '@/utils/helper';
+
 function Logo({ className }: { className?: string }) {
   return (
     <svg
-      width="40"
-      height="40"
+      width="100"
+      height="100"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      className={cn('rounded-sm', className)}
     >
-      <rect width="40" height="40" rx="4" ry="4" fill="black" />
+      <rect width="100" height="100" fill="black" />
 
       <text
         x="50%"

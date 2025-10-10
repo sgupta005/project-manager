@@ -15,6 +15,7 @@ import Project from './pages/Project';
 import ProjectSettings from './features/projects/components/ProjectSettings';
 import Task from './pages/Task';
 import MyTasks from './pages/MyTasks';
+import Landing from './pages/Landing';
 
 function App() {
   return (
@@ -25,10 +26,7 @@ function App() {
         }}
       />
       <Routes>
-        <Route
-          path="/"
-          element={<Navigate to="/organisation" replace={true} />}
-        />
+        <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route
