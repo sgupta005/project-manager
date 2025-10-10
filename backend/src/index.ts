@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import connectDb from './db/connectDb';
 import globalErrorHandler from './middlewares/globalErrorHandler';
 import logger from './middlewares/logger';
+import { dbConnectMiddleware } from './middlewares/dbConnect';
 import authRouter from './routes/auth.route';
 import organisationRouter from './routes/organisation.router';
 import projectRouter from './routes/project.router';
@@ -25,6 +25,9 @@ app.use(express.static('public'));
 
 app.use(logger);
 
+// Ensure database connection before processing any API requests
+app.use('/api', dbConnectMiddleware);
+
 app.use('/api/auth', authRouter);
 app.use('/api/organisation', organisationRouter);
 app.use('/api/organisation/:orgId/project', projectRouter);
@@ -36,5 +39,4 @@ app.use(globalErrorHandler);
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
-  connectDb();
 });

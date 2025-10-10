@@ -40,8 +40,13 @@ async function connectDb() {
     const opts = {
       bufferCommands: false, // Disable mongoose buffering for serverless
       maxPoolSize: 10, // Limit connection pool size for serverless
-      serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
+      minPoolSize: 2, // Maintain minimum pool for faster responses
+      serverSelectionTimeoutMS: 10000, // Timeout after 10s (was causing issues at 5s)
       socketTimeoutMS: 45000, // Close sockets after 45s of inactivity
+      maxIdleTimeMS: 10000, // Close idle connections after 10s
+      retryWrites: true, // Retry failed writes
+      retryReads: true, // Retry failed reads
+      w: 'majority' as const, // Write concern for replica sets
     };
 
     cached.promise = mongoose
