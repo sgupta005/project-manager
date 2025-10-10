@@ -10,7 +10,7 @@
 - [x] Profile page and profile avatar
 - [x] Create Readme file
 - [ ] Make empty ui look beautiful
-- [ ] Create Landing page
+- [x] Create Landing page
 - [ ] Add AI features??
 - [x] Create Profile icon and dropdown
 - [x] Calendar View
