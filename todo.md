@@ -6,7 +6,7 @@
 - [x] Work on dashboard page
 - [x] Create my tasks page
 - [x] show analytics on project page
-- [ ] Redeploy backend to some faster provider
+- [x] Redeploy backend to some faster provider
 - [x] Profile page and profile avatar
 - [ ] Create Readme file
 - [ ] Make empty ui look beautiful
