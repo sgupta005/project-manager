@@ -18,7 +18,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <Link to="/organisations">
+          <Link to="/organisation">
             <Button
               size="lg"
               className="mt-4 px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl"

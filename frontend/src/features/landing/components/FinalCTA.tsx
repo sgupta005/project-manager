@@ -19,7 +19,7 @@ export default function FinalCTA() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-          <Link to="/organisations">
+          <Link to="/organisation">
             <Button
               size="lg"
               className="px-8 py-6 text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
