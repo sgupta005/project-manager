@@ -86,16 +86,14 @@ export function SidebarContent({ isSidebarOpen, setIsSidebarOpen }: PropTypes) {
     >
       <>
         <div className="flex items-center gap-3 w-full min-h-10 relative">
-          <div
-            className="flex items-center gap-3 cursor-pointer flex-1"
-            onClick={() => navigate('/')}
-          >
+          <div className="flex items-center gap-3 cursor-pointer flex-1">
             <Logo
               className={`size-10 tran ${
                 isSidebarOpen ? 'opacity-100' : 'opacity-0'
               }`}
             />
             <p
+              onClick={() => navigate('/')}
               className={`text-xl font-bold tran ${
                 isSidebarOpen ? 'opacity-100' : 'opacity-0'
               }`}
@@ -180,29 +178,33 @@ export function SidebarContent({ isSidebarOpen, setIsSidebarOpen }: PropTypes) {
         </div>
 
         <Separator />
-        <div className="flex items-center relative">
-          <p
-            className={`uppercase text-sm font-semibold  tran ${
-              isSidebarOpen ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            Projects
-          </p>
+        {projects.length > 0 && (
+          <>
+            <div className="flex items-center relative">
+              <p
+                className={`uppercase text-sm font-semibold  tran ${
+                  isSidebarOpen ? 'opacity-100' : 'opacity-0'
+                }`}
+              >
+                Projects
+              </p>
 
-          <CreateProject>
-            <Button
-              className={`md:absolute size-4 mr-0 ml-auto cursor-pointer ${
-                isSidebarOpen ? 'right-0' : 'right-[calc((100%-16px)/2)]'
-              }`}
-              variant="ghost"
-              size="icon"
-            >
-              <CirclePlus className="size-4" />
-            </Button>
-          </CreateProject>
-        </div>
+              <CreateProject>
+                <Button
+                  className={`md:absolute size-4 mr-0 ml-auto cursor-pointer ${
+                    isSidebarOpen ? 'right-0' : 'right-[calc((100%-16px)/2)]'
+                  }`}
+                  variant="ghost"
+                  size="icon"
+                >
+                  <CirclePlus className="size-4" />
+                </Button>
+              </CreateProject>
+            </div>
 
-        <ProjectList isSidebarOpen={isSidebarOpen} projects={projects} />
+            <ProjectList isSidebarOpen={isSidebarOpen} projects={projects} />
+          </>
+        )}
       </>
     </div>
   );

@@ -39,9 +39,17 @@ export default function UpcomingTasks({ tasks }: UpcomingTasksProps) {
   return (
     <DashboardCard title={`Upcoming Tasks (${upcomingTasks.length})`}>
       {upcomingTasks.length === 0 ? (
-        <div className="text-center py-6">
-          <ClipboardList className="size-12 mx-auto mb-3 text-gray-800" />
-          <p className="text-gray-500">No upcoming tasks</p>
+        <div className="flex flex-col items-center justify-center px-4 min-h-[200px]">
+          <div className="bg-gray-50 rounded-full p-6 mb-4">
+            <ClipboardList className="size-8 text-gray-400" />
+          </div>
+          <h3 className="text-lg font-semibold text-gray-700 mb-2">
+            No tasks yet
+          </h3>
+          <p className="text-sm text-gray-500 text-center max-w-sm">
+            Tasks assigned to you will appear here. Create a project first to
+            start adding tasks.
+          </p>
         </div>
       ) : (
         <div className="space-y-4">

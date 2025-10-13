@@ -9,7 +9,7 @@
 - [x] Redeploy backend to some faster provider
 - [x] Profile page and profile avatar
 - [x] Create Readme file
-- [ ] Make empty ui look beautiful
+- [x] Make empty ui look beautiful
 - [x] Create Landing page
 - [ ] Add AI features??
 - [x] Create Profile icon and dropdown

@@ -33,9 +33,16 @@ export default function ProjectsList() {
         </Button>
       </CreateProject>
       {!projects || projects.length === 0 ? (
-        <div className="text-center py-6">
-          <FolderIcon className="size-12 text-gray-800 mx-auto mb-3" />
-          <p className="text-gray-500">No projects found</p>
+        <div className="flex flex-col items-center justify-center px-4 min-h-[200px]">
+          <div className="bg-gray-50 rounded-full p-6 mb-4">
+            <FolderIcon className="size-8 text-gray-400" />
+          </div>
+          <h3 className="text-lg font-semibold text-gray-700 mb-2">
+            No projects yet
+          </h3>
+          <p className="text-sm text-gray-500 text-center max-w-sm mb-3">
+            Projects help you organize tasks and collaborate with your team.
+          </p>
         </div>
       ) : (
         <div className="space-y-3 max-h-[400px] overflow-y-auto pr-2">
